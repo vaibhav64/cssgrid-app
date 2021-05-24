@@ -1,0 +1,110 @@
+
+<!-- <div class="day">
+    <div *ngFor="let day of dayArr" >
+        <div  *ngIf = "day.slots[0]; else closed">            
+            <div class="slot">
+                <div *ngIf = "day.slots[0]">
+                    {{day.label}}-{{day.slots[0].label}}
+                </div>
+                <div *ngIf = "day.slots[1]">
+                    Lunch
+                </div>
+                <div *ngIf = "day.slots[1]">
+                    {{day.label}}-{{day.slots[1].label}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #closed>
+    <div class = "slot">
+        <div>closed</div>
+    </div>
+</ng-template> -->
+
+
+<!-- <table>
+    <td *ngFor="let day of dayArr">
+        
+            <tr *ngIf = "day.slots[0] ; else closed">
+                <td>{{day.label}}-{{day.slots[0].label}}</td>            
+            </tr>
+            <tr *ngIf = "day.slots[1]">
+               <td>Lunch</td>
+            </tr>
+            <tr *ngIf = "day.slots[1]">
+                <td>{{day.label}}-{{day.slots[1].label}}</td>
+            </tr>
+              
+    </td>
+</table>
+<ng-template #closed>
+    <tr>
+        <td>closed</td>
+    </tr>
+</ng-template> -->
+
+
+<div class="schedule" aria-labelledby="schedule-heading">
+	
+	<div class="session day" style="grid-column: day-1; grid-row: pre-lunch-start/ post-lunch-end;">
+		<span class="session-time">9:30 a</span>
+		<span class="session-track">Day: 1</span>
+	</div>	
+	<div class="session day" style="grid-column: day-2; grid-row: pre-lunch;">
+		<span class="session-time">9:30a - 12:30p</span>
+		<span class="session-track">Day: 2</span>
+	</div>		
+	<div class="session day" style="grid-column: day-3; grid-row: pre-lunch-start/ post-lunch-end;">
+		<span class="session-time">9:30a</span>
+		<span class="session-track">Day: 3</span>
+	</div>	
+	<div class="session day" style="grid-column: day-4; grid-row: pre-lunch;">
+		<span class="session-time">9:30a - 12:30p</span>
+		<span class="session-track">Day: 4</span>
+	</div>	
+    <div class="session day" style="grid-column: day-5; grid-row: pre-lunch;">
+		<span class="session-time">9:30a - 12:30p</span>
+		<span class="session-track">Day: 5</span>
+	</div>	
+    <div class="session day" style="grid-column: day-6; grid-row: pre-lunch;">
+		<span class="session-time">9:30a - 12:30p</span>
+		<span class="session-track">Day: 6</span>
+	</div>	
+    <div class="session day" style="grid-column: day-7; grid-row: pre-lunch-start/ post-lunch-end;">
+		<span class="session-time">Closed</span>
+		<span class="session-track">Day: 7</span>
+	</div>	
+	
+	
+	<div class="session day" style="grid-column: day-2; grid-row: lunch;">
+		<span class="session-time">Lunch</span>
+		<span class="session-track">Day: 2</span>
+	</div>
+	
+	<div class="session day" style="grid-column: day-4-start / day-6-end; grid-row: lunch;">
+		<span class="session-time">Lunch</span>
+		<span class="session-track">Day: 4, 5 & 6</span>
+	</div>
+
+    <div class="session day" style="grid-column: day-4; grid-row: post-lunch;">
+		<span class="session-time">1:30a - 5:30p</span>
+		<span class="session-track">Day: 4</span>
+	</div>
+    <div class="session day" style="grid-column: day-5; grid-row: post-lunch;">
+		<span class="session-time">1:30a - 5:30p</span>
+		<span class="session-track">Day: 5</span>
+	</div>
+    <div class="session day" style="grid-column: day-6; grid-row: post-lunch;">
+		<span class="session-time">1:30a - 5:30p</span>
+		<span class="session-track">Day: 6</span>
+	</div>
+    <div class="session day" style="grid-column: day-2; grid-row: post-lunch;">
+		<span class="session-time">1:30a - 5:30p</span>
+		<span class="session-track">Day: 2</span>
+	</div>
+
+
+</div>
+
+

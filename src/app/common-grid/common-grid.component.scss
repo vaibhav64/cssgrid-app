@@ -1,0 +1,142 @@
+// .day > div{
+//     background: rgb(195, 230, 72);
+//     padding: 1em;
+// }
+
+// .day > div:nth-child(odd){
+//     background: rgb(86, 132, 216);
+// }
+
+// .day{
+//     display: grid;
+//     grid-template-columns: repeat(7, 1fr);
+//     //grid-template-rows: minmax(400px, auto);
+//     grid-auto-flow: row;
+//     gap: 1em;
+// }
+
+// .slot > div{
+//     background: #eee;
+//     padding: 1em;
+// }
+
+// .slot{
+//     display: grid;
+//     gap: 1em;
+//     grid-template-rows: auto;
+// }
+
+// table, th, td, tr {
+//     border: 1px solid black;
+//     justify-items: center;
+//     text-align: center;
+//   }
+
+//   .col{
+//       display:flex;    
+// }
+
+/*************************
+ * GRID SCHEDULE LAYOUT
+ *************************/
+ @media screen and (min-width:700px) {
+	.schedule {
+		display: grid;
+		grid-gap: 1em;
+		grid-template-rows:
+			[pre-lunch-start] 1fr
+			[pre-lunch-end lunch-start] 1fr
+			[lunch-end post-lunch-start] 1fr
+			[post-lunch-end];
+			/* Note 1:
+			Use 24hr time for gridline names for simplicity
+
+			Note 2: Use "auto" instead of "1fr" for a more compact schedule where height of a slot is not proportional to the session length. Implementing a "compact" shortcode attribute might make sense for this!
+			Try 0.5fr for more compact equal rows. I don't quite understand how that works :)
+			*/
+		
+		grid-template-columns:
+			[day-1-start] 1fr
+			[day-1-end day-2-start] 1fr
+			[day-2-end day-3-start] 1fr
+			[day-3-end day-4-start] 1fr
+            [day-4-end day-5-start] 1fr
+            [day-5-end day-6-start] 1fr
+            [day-6-end day-7-start] 1fr
+			[day-7-end];
+	}
+}
+
+
+/* Small-screen & fallback styles */
+.session {
+	margin-bottom:  1em;
+}
+
+@supports( display:grid ) {
+	@media screen and (min-width: 700px) {
+		.session {
+			margin: 0;
+		}	
+	}
+}
+
+/*************************
+ * VISUAL STYLES
+ * Design-y stuff ot particularly important to the demo
+ *************************/
+body {
+	padding: 50px;
+	max-width: 1100px;
+	margin: 0 auto;
+	line-height: 1.5;
+}
+
+.session {
+	padding: .5em;
+	border-radius: 2px;
+	font-size: 14px;
+}
+
+.session-time,
+.session-track{
+	display: block;
+}
+
+.time-slot {
+	margin: 0;
+	font-size: 1em;
+}
+
+.track-slot,
+.time-slot {
+	font-weight: bold;
+	font-size:.75em;
+}
+
+.day{
+	background-color: #1259B2;
+	color: #fff;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.text {
+	max-width: 750px;
+	font-size: 18px;
+	margin: 0 auto 50px;
+}
+
+.meta {
+	color: #555;
+	font-style: italic;
+}
+
+.meta a {
+	color: #555;
+}
+
+hr {
+	margin: 40px 0;
+}
